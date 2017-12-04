@@ -1,0 +1,18 @@
+{
+  "name": "noise-dataload",
+  "version": "0.1.0",
+  "description": "Loads a file or directory full of JSON into Noise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Noise",
+    "JSON"
+  ],
+  "author": "Volker Mische",
+  "license": "MIT",
+  "dependencies": {
+    "noise-search": "^0.7.0"
+  }
+}
