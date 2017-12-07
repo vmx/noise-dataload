@@ -14,8 +14,6 @@ const inputFile = process.argv[2];
 console.log(`Loading ${inputFile}`);
 
 const filename = path.parse(inputFile);
-
-
 const index = noise.open(filename.name, true);
 
 lineReader.eachLine(inputFile, (line, last) => {
