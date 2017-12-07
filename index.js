@@ -16,14 +16,15 @@ console.log(`Loading ${inputFile}`);
 const filename = path.parse(inputFile);
 const index = noise.open(filename.name, true);
 
-lineReader.eachLine(inputFile, (line, last) => {
-  index.add(JSON.parse(line)).then(resp => {
+lineReader.eachLine(inputFile, async (line, last) => {
+  try {
+    const resp = await index.add(JSON.parse(line));
     process.stdout.write('.');
     if (last) {
       console.log('\nDone.');
       process.exit(0);
     }
-  }).catch(error => {
+  } catch(error) {
     console.log('error:', error);
-  });
+  };
 });
