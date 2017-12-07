@@ -25,6 +25,6 @@ lineReader.eachLine(inputFile, async (line, last) => {
       process.exit(0);
     }
   } catch(error) {
-    console.log('error:', error);
+    console.error('error:', error);
   };
 });
