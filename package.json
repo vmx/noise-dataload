@@ -16,5 +16,8 @@
   "scripts": {
     "start": "echo \"Usage: node index.js <path-to-json-file>\"",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "dataload": "index.js"
   }
 }
