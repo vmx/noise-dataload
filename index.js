@@ -5,6 +5,11 @@ const lineReader = require('line-reader');
 const noise = require('noise-search');
 
 
+if (process.argv.length != 3) {
+  console.log(`Usage: node index.js <path-to-json-file>`);
+  process.exit(1);
+}
+
 const inputFile = process.argv[2];
 console.log(`Loading ${inputFile}`);
 
